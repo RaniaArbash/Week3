@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/AliceBlue"
+    >
+    <TextView
+        android:id="@+id/titleID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/donation_app_title"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        ></TextView>
+
+    <TextView
+        android:id="@+id/paymentMethodID"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="Payment Method: "
+        android:textSize="20sp"
+        android:layout_below="@id/titleID"
+        >
+
+    </TextView>
+
+
+<RadioGroup
+    android:id="@+id/radioGroupID"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/titleID"
+    android:layout_toEndOf="@id/paymentMethodID"
+    android:layout_marginStart="40dp"
+
+    >
+
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/paypal_btn"
+        android:text="PayPal">
+
+    </RadioButton>
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Credit Card"
+        android:id="@+id/credit_btn"
+        >
+
+    </RadioButton>
+</RadioGroup>
+
+
+    <TextView
+        android:id="@+id/howToShareID"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_below="@id/radioGroupID"
+        android:layout_marginTop="40dp"
+        android:text="How Would you like to share this:"
+        android:textSize="20sp">
+
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/checkBoxesLayoutID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="40dp"
+        android:layout_below="@id/radioGroupID"
+        android:layout_toEndOf="@id/howToShareID"
+        android:layout_marginTop="40dp"
+
+
+        >
+<CheckBox
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/WhatsUp"
+    android:id="@+id/wup_check"
+
+    >
+</CheckBox>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/messanger"
+        android:id="@+id/messenger_check"
+
+        >
+    </CheckBox>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_message"
+        android:id="@+id/messages_check"
+
+        >
+
+    </CheckBox>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/donateTextID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="How much would you like to donate?"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/checkBoxesLayoutID"
+        >
+
+    </TextView>
+
+    <EditText
+
+        android:id="@+id/amount"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/donateTextID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:inputType="number"
+        android:textSize="20sp">
+
+    </EditText>
+    <Button
+        android:id="@+id/donate_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/amount"
+        android:layout_marginTop="20sp"
+        android:text="Donate Now"
+        android:background="@color/IndianRed"
+        android:layout_centerHorizontal="true"
+
+        >
+
+    </Button>
+
+</RelativeLayout>
